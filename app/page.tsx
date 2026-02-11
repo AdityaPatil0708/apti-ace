@@ -1,12 +1,19 @@
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { LandingHero } from "./components/ui/LandingHero";
+import { Hero1 } from "./components/ui/Hero1";
+import { Hero2 } from "./components/ui/Hero2";
+
 
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="">
       <Navbar/>
-      <LandingHero/>
+      <main>
+        <Hero1/>
+        <Hero2/>
+      </main>
+      <Footer/>
     </div>
   );
 }
