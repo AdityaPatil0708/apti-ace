@@ -4,7 +4,7 @@ import { Card } from "./Card";
 const features = [
   {
     icon: BookOpen,
-    title: "1000+ Practice Questions",
+    title: "200+ Practice Questions",
     description: "Curated aptitude and reasoning questions covering all major topics.",
   },
   {

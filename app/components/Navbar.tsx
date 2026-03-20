@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className="relative flex justify-center items-center p-5 text-sm max-w-7xl mx-auto">
       <div className="absolute left-4">
         <Link href="/" >
-          <img src="./aptiace.png" alt="" className="h-7 rounded-md  "/>
+          <img src="./aptiace.png" alt="" className="h-7 rounded-md" />
         </Link>
       </div>
       <div>
@@ -32,7 +32,7 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="absolute right-4 flex flex-row gap-2">
+      <div className="absolute right-4 flex flex-row gap-2 items-center">
         <Link
           href="/login"
           className="bg-primary hover:bg-primary-hover text-white px-3 py-1 rounded-sm hover:cursor-pointer text-sm outline-none"

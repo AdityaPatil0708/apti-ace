@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react"
 export function Hero1() {
     return (
-        <div className="justify-center mt-20 flex flex-col gap-5 items-center text-center">
+        <div className="justify-center mt-30 flex flex-col gap-5 items-center text-center">
             <div className="flex flex-row bg-gray-100 items-center gap-1 px-3 py-1 rounded-full">
                 <img src="./star.png" alt="" className="h-5 w-5" />
                 <p className="text-primary text-sm rounded-full">Ace your placement tests</p>
@@ -17,7 +17,7 @@ export function Hero1() {
                     Start Practicing free
                     <ArrowRight className="w-4 h-4" />
                 </button>
-                <button className="hover:cursor-pointer border border-gray-500 px-3 py-2 rounded-sm text-sm">View Pricing</button>
+                <button className="hover:cursor-pointer border border-gray-400 px-3 py-2 rounded-sm text-sm">View Pricing</button>
             </div>
         </div>
     )
