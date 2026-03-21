@@ -20,8 +20,8 @@ export function Card({
             <div className={`h-12 w-12 rounded-lg ${iconBgColor} flex items-center justify-center mb-4`}>
                 <Icon className={`h-6 w-6 ${iconColor}`} />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-            <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+            <p className="text-[14px] text-gray-600 leading-relaxed">{description}</p>
         </div>
     );
 }

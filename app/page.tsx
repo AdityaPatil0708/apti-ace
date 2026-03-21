@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { Hero1 } from "./components/ui/Hero1";
 import { Hero2 } from "./components/ui/Hero2";
+import { Hero3 } from "./components/ui/Hero3";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <main>
         <Hero1/>
         <Hero2/>
+        <Hero3/>
       </main>
       <Footer/>
     </div>

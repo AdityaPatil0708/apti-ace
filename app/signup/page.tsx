@@ -31,7 +31,7 @@ export default function Signup() {
   return (
     <div className="min-h-screen w-screen flex bg-white">
 
-      <div className="flex w-[40%] bg-[#F0F6FF] flex-col items-center justify-center">
+      <div className="flex w-[40%] bg-gray-100 flex-col items-center justify-center">
         {/* Logo */}
         <div className="relative z-10 flex flex-col items-center justify-center">
           <img src="/aptiace.png" alt="AptiAce" className="h-12" />
@@ -69,9 +69,9 @@ export default function Signup() {
 
           {/* Divider */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="flex-1 h-px bg-gray-100" />
+            <div className="flex-1 h-px bg-gray-200" />
             <span className="text-xs text-gray-400 font-medium">or sign up with email</span>
-            <div className="flex-1 h-px bg-gray-100" />
+            <div className="flex-1 h-px bg-gray-200" />
           </div>
 
           {/* Form */}
@@ -82,7 +82,7 @@ export default function Signup() {
                 onChange={(e) => setName(e.target.value)}
                 type="text"
                 placeholder="Aditya Patil"
-                className="w-full border border-gray-300 outline-none px-3.5 py-2.5 rounded-xl text-sm text-gray-800 placeholder:text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 transition-all"
+                className="w-full border border-gray-300 outline-none px-3.5 py-2.5 rounded-xl text-sm text-gray-800 placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 transition-all"
               />
             </div>
 
@@ -92,7 +92,7 @@ export default function Signup() {
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 placeholder="aditya@gmail.com"
-                className="w-full border border-gray-300 outline-none px-3.5 py-2.5 rounded-xl text-sm text-gray-800 placeholder:text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 transition-all"
+                className="w-full border border-gray-300 outline-none px-3.5 py-2.5 rounded-xl text-sm text-gray-800 placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 transition-all"
               />
             </div>
 
@@ -103,7 +103,7 @@ export default function Signup() {
                   onChange={(e) => setPassword(e.target.value)}
                   type={showPassword ? "text" : "password"}
                   placeholder="••••••••"
-                  className="w-full border border-gray-300 outline-none px-3.5 py-2.5 rounded-xl text-sm text-gray-800 placeholder:text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 transition-all pr-10"
+                  className="w-full border border-gray-300 outline-none px-3.5 py-2.5 rounded-xl text-sm text-gray-800 placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 transition-all pr-10"
                 />
                 <button
                   type="button"
