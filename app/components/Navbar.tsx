@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="relative text-sm max-w-7xl mx-auto">
       {/* Top Bar */}
-      <div className="grid grid-cols-3 items-center px-4 md:px-5 py-4">
+      <div className="flex items-center justify-between md:grid md:grid-cols-3 px-4 md:px-5 py-4">
 
         {/* Left: Logo */}
         <Link href="/" onClick={() => setMenuOpen(false)}>
@@ -25,7 +25,7 @@ export default function Navbar() {
         </ul>
 
         {/* Right: Login + Mobile Hamburger */}
-        <div className="flex items-center justify-end gap-2">
+        <div className="flex items-center justify-end gap-1">
           <Link
             href="/login"
             className="bg-primary hover:bg-primary-hover text-white px-3 py-1 rounded-md text-sm transition-colors"
@@ -34,7 +34,7 @@ export default function Navbar() {
           </Link>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-1.5 rounded-md text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors"
+            className="md:hidden rounded-md text-gray-600 hover:text-primary hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
           >
             {menuOpen ? <X size={25} /> : <Menu size={25} />}
