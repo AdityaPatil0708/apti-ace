@@ -12,7 +12,7 @@ export function CompanyLogos() {
 
   return (
     <div className="company-logos-wrapper">
-      <p className="company-logos-label">
+      <p className="text-center uppercase text-sm font-medium">
         Trusted by students preparing for
       </p>
 
