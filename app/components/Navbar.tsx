@@ -9,22 +9,23 @@ export default function Navbar() {
   return (
     <nav className="relative text-sm max-w-7xl mx-auto">
       {/* Top Bar */}
-      <div className="flex items-center justify-between px-4 md:px-5 py-4">
-        {/* Logo */}
+      <div className="grid grid-cols-3 items-center px-4 md:px-5 py-4">
+
+        {/* Left: Logo */}
         <Link href="/" onClick={() => setMenuOpen(false)}>
           <img src="./aptiace.png" alt="AptiAce" className="h-8 rounded-md" />
         </Link>
 
-        {/* Desktop Nav Links */}
-        <ul className="hidden md:flex flex-row gap-6">
+        {/* Center: Desktop Nav Links */}
+        <ul className="hidden md:flex justify-center flex-row gap-6">
           <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
           <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
           <li><Link href="/aptitude" className="hover:text-primary transition-colors">Aptitude</Link></li>
           <li><Link href="/reasoning" className="hover:text-primary transition-colors">Reasoning</Link></li>
         </ul>
 
-        {/* Desktop Login + Mobile Hamburger */}
-        <div className="flex items-center gap-">
+        {/* Right: Login + Mobile Hamburger */}
+        <div className="flex items-center justify-end gap-2">
           <Link
             href="/login"
             className="bg-primary hover:bg-primary-hover text-white px-3 py-1 rounded-md text-sm transition-colors"
@@ -85,8 +86,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-
       </div>
     </nav>
   );
