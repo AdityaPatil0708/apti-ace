@@ -75,7 +75,7 @@ export function Hero3() {
     <section className="max-w-7xl mx-auto px-5 py-16">
       {/* Heading */}
       <div className="text-center mb-5">
-        <p className="text-primary tracking-wide text-[16px] font-medium">PRICING PLAN</p>
+        <p className="text-primary tracking-wide text-xs md:text-sm font-medium">PRICING PLAN</p>
       </div>
 
       {/* Cards */}

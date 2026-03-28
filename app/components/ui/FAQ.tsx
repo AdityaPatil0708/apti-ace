@@ -70,13 +70,13 @@ export function FAQ() {
       <div className="max-w-3xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-12 flex flex-col gap-2">
-          <p className="text-primary tracking-wide text-[15px] font-medium">
+          <p className="text-primary tracking-wide text-xs md:text-sm font-medium">
             FAQ's
           </p>
-          <p className="text-[40px] font-semibold text-zinc-800 leading-tight">
+          <p className="text-3xl md:text-4xl  font-semibold text-zinc-800 leading-tight">
             Got <span className="text-primary">questions?</span> We've got answers.
           </p>
-          <p className="text-gray-500 mt-1">
+          <p className="text-gray-500">
             Everything you need to know before getting started.
           </p>
         </div>

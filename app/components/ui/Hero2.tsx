@@ -29,10 +29,10 @@ export function Hero2() {
     <section className="py-15 bg-gray-100 rounded-md">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center flex flex-col gap-2 mb-8">
-          <p className="text-[37px] font-semibold">
+          <p className="text-3xl md:text-4xl font-semibold">
             Everything you need to <span className="text-primary">succeed</span>
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-500 text-xs md:text-[16px]">
             Our platform is built to help college students prepare <br />
             efficiently for placement tests.
           </p>

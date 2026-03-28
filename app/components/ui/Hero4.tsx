@@ -30,10 +30,10 @@ export function Hero4() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-14 flex flex-col gap-2">
-          <p className="text-primary tracking-wide text-[15px] font-medium uppercase">
+          <p className="text-primary tracking-wide text-xs md:text-sm font-medium uppercase">
             How It Works
           </p>
-          <p className="text-[40px] font-semibold text-zinc-800 leading-tight">
+          <p className="text-3xl md:text-4xl font-semibold text-zinc-800 leading-tight">
             Get placement-ready in{" "}
             <span className="text-primary">3 simple steps</span>
           </p>

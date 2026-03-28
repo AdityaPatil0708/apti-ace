@@ -4,18 +4,92 @@
   --color-primary: var(--color-blue-500);
   --color-primary-hover: var(--color-blue-400)
 }
+
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-.animate-marquee {
-  animation: marquee 18s linear infinite;
+.company-logos-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
+.company-logos-label {
+  text-align: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .company-logos-label {
+    font-size: 0.875rem;
+  }
+}
+
+.company-logos-track-outer {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.company-logos-fade-left,
+.company-logos-fade-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 4rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.company-logos-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.company-logos-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+.company-logos-track {
+  display: flex;
+  gap: 2.5rem;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 25s linear infinite;
+}
+
+.company-logos-track:hover {
+  animation-play-state: paused;
+}
+
+.company-logo-item {
+  display: inline-flex;
+  align-items: center;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.company-logo-img {
+  height: 2rem;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.company-logo-img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
 @media (max-width: 768px) {
-  .animate-marquee {
-    animation-duration: 8s;
+  .company-logos-track {
+    animation-duration: 5s;
   }
 }
 body {

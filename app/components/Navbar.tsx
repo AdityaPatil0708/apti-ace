@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-4 md:px-5 py-4">
         {/* Logo */}
         <Link href="/" onClick={() => setMenuOpen(false)}>
-          <img src="./aptiace.png" alt="AptiAce" className="h-6 md:h-7 rounded-md" />
+          <img src="./aptiace.png" alt="AptiAce" className="h-8 rounded-md" />
         </Link>
 
         {/* Desktop Nav Links */}
@@ -24,10 +24,10 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop Login + Mobile Hamburger */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-">
           <Link
             href="/login"
-            className="bg-primary hover:bg-primary-hover text-white px-3 py-1.5 rounded-md text-sm transition-colors"
+            className="bg-primary hover:bg-primary-hover text-white px-3 py-1 rounded-md text-sm transition-colors"
           >
             Login
           </Link>
