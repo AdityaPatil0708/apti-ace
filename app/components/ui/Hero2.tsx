@@ -26,10 +26,10 @@ const features = [
 
 export function Hero2() {
   return (
-    <section className="mt-20 bg-gray-50 py-16">
+    <section className="py-15 bg-gray-100">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center flex flex-col gap-2 mb-12">
-          <p className="text-[40px] font-semibold">
+          <p className="text-[37px] font-semibold">
             Everything you need to <span className="text-primary">succeed</span>
           </p>
           <p className="text-gray-600">
