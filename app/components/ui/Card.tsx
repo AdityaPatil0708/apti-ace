@@ -23,5 +23,6 @@ export function Card({
             <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
             <p className="text-[14px] text-gray-600 leading-relaxed">{description}</p>
         </div>
+        
     );
 }

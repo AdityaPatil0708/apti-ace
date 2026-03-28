@@ -85,27 +85,47 @@
 //     </div>
 //   );
 // }
+
 import { ArrowRight } from "lucide-react"
+
 export function Hero1() {
-    return (
-        <div className="justify-center py-20 flex flex-col gap-5 items-center text-center">
-            <div className="flex flex-row bg-gray-100 items-center gap-1 px-3 py-1 rounded-full">
-                <img src="./star.png" alt="" className="h-5 w-5" />
-                <p className="text-primary text-sm rounded-full">Ace your placement tests</p>
-            </div>
-            <div className="text-6xl text-zinc-800 font-semibold">
-                Master Your Aptitude <br /> Skills with <span className="text-primary">Confidence</span>
-            </div>
-            <div>
-                Practice aptitude, reasoning, and placement tests with our smart platform. <br /> Track your progress and crack your dream job.
-            </div>
-            <div className="flex gap-4">
-                <button className="hover:cursor-pointer hover:bg-primary-hover outline-none border px-3 py-2 rounded-md text-sm bg-primary text-white flex items-center gap-2">
-                    Start Practicing free
-                    <ArrowRight className="w-4 h-4" />
-                </button>
-                <button className="hover:cursor-pointer hover:bg-black hover:text-white transition duration-300 border border-gray-400 px-3 py-2 rounded-sm text-sm">View Pricing</button>
-            </div>
+  return (
+    <div className="flex flex-col justify-between py-12 md:py-20">
+      {/* Main hero content */}
+      <div className="flex-1 flex flex-col justify-center items-center text-center gap-4 md:gap-5 px-4 md:px-6">
+
+        {/* Badge */}
+        <div className="flex flex-row bg-gray-100 items-center gap-1 px-3 py-1 rounded-full">
+          <img src="./star.png" alt="" className="h-4 w-4 md:h-5 md:w-5" />
+          <p className="text-primary text-xs md:text-sm rounded-full">Ace your placement tests</p>
         </div>
-    )
+
+        {/* Heading */}
+        <h1 className="text-4xl  md:text-6xl text-zinc-800 font-semibold leading-tight">
+          Master Your Aptitude{" "}
+          <br className="hidden sm:block" />
+          Skills with{" "}
+          <span className="text-primary">Confidence</span>
+        </h1>
+
+        {/* Subtext */}
+        <p className="text-gray-500 text-sm md:text-[15px] max-w-xs sm:max-w-sm md:max-w-xl leading-relaxed">
+          Practice aptitude, reasoning, and placement tests with our smart
+          platform. Track your progress and crack your dream job.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex gap-3">
+          <button className="hover:cursor-pointer hover:bg-primary-hover outline-none border px-4 py-2 rounded-md text-sm bg-primary text-white flex items-center gap-2">
+            Start Practicing Free
+            <ArrowRight className="w-4 h-4" />
+          </button>
+          <button className="hover:cursor-pointer hover:bg-black hover:text-white transition duration-300 border border-gray-400 px-4 py-2 rounded-md text-sm">
+            View Pricing
+          </button>
+        </div>
+      </div>
+
+    </div>
+  )
 }

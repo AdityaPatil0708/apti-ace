@@ -36,7 +36,7 @@ export function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`relative overflow-hidden w-full rounded-2xl md:rounded-3xl border border-gray-200 p-6 md:p-8 flex flex-col justify-between transition ${cardBgColor}`}
+      className={`relative overflow-hidden w-full rounded-2xl md:rounded-3xl border border-gray-300 p-6 md:p-8 flex flex-col justify-between transition ${cardBgColor}`}
     >
       {/* Radial dot pattern overlay */}
       {dotted && (

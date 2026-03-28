@@ -26,7 +26,7 @@ const steps = [
 
 export function Hero4() {
   return (
-    <section className="bg-gray-100 py-15">
+    <section className="bg-gray-100 py-15 rounded-md">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-14 flex flex-col gap-2">
