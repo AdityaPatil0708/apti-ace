@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff, ArrowRight, Brain } from "lucide-react";
 import Link from "next/link";
-import axios from "axios";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,11 +17,24 @@ export default function Login() {
     setError("");
     setLoading(true);
     try {
-      await axios.post("http://localhost:3000/api/login", { email, password });
+      const res = await fetch("http://localhost:3000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data?.message || "Login failed");
+      }
+
       localStorage.setItem("customLoggedIn", "true");
       router.push("/");
     } catch (err: any) {
-      setError(err.response?.data?.message || "Login failed");
+      setError(err.message || "Login failed");
     } finally {
       setLoading(false);
     }
