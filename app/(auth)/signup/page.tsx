@@ -41,7 +41,7 @@ export default function Signup() {
   }
   return (
     <div className="min-h-screen w-screen flex bg-white">
-      <div className="flex w-[40%] bg-gray-100 flex-col items-center justify-center">
+      <div className="hidden lg:flex w-[40%] bg-gray-100 flex-col items-center justify-center">
         {/* Logo */}
         <div className="relative z-10 flex flex-col items-center justify-center">
           <img src="/aptiace.png" alt="AptiAce" className="h-12" />
@@ -55,10 +55,6 @@ export default function Signup() {
       {/* Right Panel */}
       <div className="w-full lg:w-[60%] flex flex-col justify-center items-center px-8 py-12">
         <div className="w-full max-w-sm">
-          {/* Mobile logo */}
-          <div className="lg:hidden mb-8 flex justify-center">
-            <img src="/aptiace.png" alt="AptiAce" className="h-9" />
-          </div>
 
           <h1 className="text-2xl font-black text-gray-900 mb-1">
             Create your account
