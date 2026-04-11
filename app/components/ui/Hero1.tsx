@@ -101,7 +101,7 @@ export function Hero1() {
         </div>
 
         {/* Heading */}
-        <h1 className="text-4xl  md:text-6xl text-zinc-800 font-semibold leading-tight">
+        <h1 className="text-4xl  md:text-6xl text-zinc-800 font-semibold">
           Master Your Aptitude{" "}
           <br className="hidden sm:block" />
           Skills with{" "}

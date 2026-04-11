@@ -55,7 +55,7 @@ export default function About() {
       <Navbar />
       <main>
         {/* ─── Hero ─── */}
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-4">
             <div className="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
               <img src="./star.png" alt="" className="h-4 w-4 md:h-5 md:w-5" />
@@ -64,7 +64,7 @@ export default function About() {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-semibold text-zinc-800 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-semibold text-zinc-800 ">
               Built for students,{" "}
               <br className="hidden sm:block" />
               by a <span className="text-primary">student</span>
