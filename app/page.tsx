@@ -11,7 +11,6 @@ import { Hero4 } from "./components/ui/Hero4";
 export default function Home() {
   return (
     <div className="">
-      <Navbar/>
       <main>
         <Hero1/>
         <CompanyLogos />
@@ -20,7 +19,6 @@ export default function Home() {
         <Hero4/>
         <FAQ/>
       </main>
-      <Footer/>
     </div>
   );
 }

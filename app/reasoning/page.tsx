@@ -90,7 +90,6 @@ export default function Reasoning() {
 
   return (
     <div>
-      <Navbar />
       <main>
         {/* ─── Hero ─── */}
         <section className="py-16 md:py-20">
@@ -170,7 +169,6 @@ export default function Reasoning() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

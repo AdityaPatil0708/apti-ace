@@ -2,17 +2,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Card } from "../components/ui/Card";
 import {
-  Target,
-  Lightbulb,
-  TrendingUp,
-  Users,
-  BookOpen,
-  BarChart3,
   ArrowRight,
+  BarChart3,
+  BookOpen,
   Github,
+  Lightbulb,
   Linkedin,
+  Target,
+  TrendingUp,
   Twitter,
+  Users,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const stats = [
@@ -26,50 +27,80 @@ const values = [
   {
     icon: Target,
     title: "Placement-Focused",
-    description:
-      "Every question, mock test, and analytics feature is designed around what actually appears in campus placement exams.",
+    description: "Every question, mock test, and analytics feature is designed around what actually appears in campus placement exams.",
   },
   {
     icon: Lightbulb,
     title: "Learn, Don't Just Solve",
-    description:
-      "Detailed solution walkthroughs help you understand the 'why' behind every answer, building lasting problem-solving skills.",
+    description: "Detailed solution walkthroughs help you understand the 'why' behind every answer, building lasting problem-solving skills.",
   },
   {
     icon: TrendingUp,
     title: "Track & Improve",
-    description:
-      "Our topic-wise analytics pinpoint your weak areas so you can focus your effort where it matters most.",
+    description: "Our topic-wise analytics pinpoint your weak areas so you can focus your effort where it matters most.",
   },
   {
     icon: Users,
     title: "Community-Driven",
-    description:
-      "Compete on leaderboards, compare with peers, and stay motivated through your entire prep journey.",
+    description: "Compete on leaderboards, compare with peers, and stay motivated through your entire prep journey.",
+  },
+];
+
+const missionItems = [
+  {
+    icon: BookOpen,
+    text: "500+ questions modelled after real placement exams",
+  },
+  {
+    icon: BarChart3,
+    text: "Topic-wise analytics to identify weak areas instantly",
+  },
+  {
+    icon: Target,
+    text: "Timed mock tests that simulate actual exam conditions",
+  },
+];
+
+const socialLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com/AdityaPatil0708",
+    icon: Github,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/aditya-patil-ap2907",
+    icon: Linkedin,
+  },
+  {
+    label: "X",
+    href: "https://x.com/Aditya_070804",
+    icon: Twitter,
   },
 ];
 
 export default function About() {
   return (
     <div>
-      <Navbar />
       <main>
         {/* ─── Hero ─── */}
         <section className="py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-4">
-            <div className="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full">
-              <img src="./star.png" alt="" className="h-4 w-4 md:h-5 md:w-5" />
-              <span className="text-primary text-xs md:text-sm">
-                Our Story
-              </span>
+            <div className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1">
+              <Image
+                src="/star.png"
+                alt=""
+                width={20}
+                height={20}
+                className="h-4 w-4 md:h-5 md:w-5"
+              />
+              <span className="text-primary text-xs md:text-sm">Our Story</span>
             </div>
-
-            <h1 className="text-4xl md:text-6xl font-semibold text-zinc-800 ">
+            <h1 className="text-4xl md:text-6xl font-semibold text-zinc-800">
               Built for students,{" "}
               <br className="hidden sm:block" />
               by a <span className="text-primary">student</span>
             </h1>
-
             <p className="text-gray-500 text-sm md:text-base max-w-xl leading-relaxed">
               AptiAce was created because placement prep shouldn&apos;t feel
               overwhelming. We&apos;re turning an anxious process into a
@@ -80,13 +111,11 @@ export default function About() {
         </section>
 
         {/* ─── Stats Strip ─── */}
-        <section className="bg-gray-100 rounded-md py-12">
+        <section className="bg-gray-100 rounded-md py-12 md:py-20">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-primary">
-                  {stat.value}
-                </p>
+                <p className="text-3xl md:text-4xl font-bold text-primary">{stat.value}</p>
                 <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
               </div>
             ))}
@@ -97,7 +126,6 @@ export default function About() {
         <section className="py-16 md:py-20">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left — text */}
               <div className="flex flex-col gap-5">
                 <p className="text-primary tracking-wide text-xs md:text-sm font-medium uppercase">
                   Why We Built This
@@ -119,30 +147,13 @@ export default function About() {
                   test.
                 </p>
               </div>
-
-              {/* Right — icons */}
               <div className="flex flex-col gap-5">
-                {[
-                  {
-                    icon: BookOpen,
-                    text: "500+ questions modelled after real placement exams",
-                  },
-                  {
-                    icon: BarChart3,
-                    text: "Topic-wise analytics to identify weak areas instantly",
-                  },
-                  {
-                    icon: Target,
-                    text: "Timed mock tests that simulate actual exam conditions",
-                  },
-                ].map((item) => (
+                {missionItems.map((item) => (
                   <div key={item.text} className="flex items-start gap-4">
                     <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <item.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <p className="text-gray-600 text-sm md:text-base">
-                      {item.text}
-                    </p>
+                    <p className="text-gray-600 text-sm md:text-base">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -161,7 +172,6 @@ export default function About() {
                 What drives <span className="text-primary">AptiAce</span>
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-6">
               {values.map((v) => (
                 <Card
@@ -177,16 +187,20 @@ export default function About() {
 
         {/* ─── Founder Spotlight ─── */}
         <section className="py-16 md:py-20">
-          <div className="max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-5">
+          <div className="max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-3">
             <p className="text-primary tracking-wide text-xs md:text-sm font-medium uppercase">
               Meet the Creator
             </p>
-            <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary">AP</span>
+            <div className="flex h-25 w-25 items-center justify-center overflow-hidden rounded-full bg-primary/10">
+              <Image
+                src="/myprofile.png"
+                alt="Aditya Patil"
+                height={80}
+                width={80}
+                className="h-full w-full object-cover"
+              />
             </div>
-            <h3 className="text-2xl font-semibold text-zinc-800">
-              Aditya Patil
-            </h3>
+            <h3 className="text-2xl font-semibold text-zinc-800">Aditya Patil</h3>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed max-w-lg">
               A student developer passionate about making placement prep
               accessible. Built AptiAce to solve the very problem he faced —
@@ -194,32 +208,16 @@ export default function About() {
               placements.
             </p>
             <div className="flex gap-3">
-              {[
-                {
-                  icon: Github,
-                  href: "https://github.com/AdityaPatil0708",
-                  label: "GitHub",
-                },
-                {
-                  icon: Linkedin,
-                  href: "https://linkedin.com/in/aditya-patil-ap2907",
-                  label: "LinkedIn",
-                },
-                {
-                  icon: Twitter,
-                  href: "https://x.com/Aditya_070804",
-                  label: "X",
-                },
-              ].map(({ icon: Icon, href, label }) => (
+              {socialLinks.map(({ label, href, icon: Icon }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors flex items-center justify-center"
+                  className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors flex items-center justify-center text-gray-500"
                 >
-                  <Icon className="w-4 h-4 text-gray-500 hover:text-white" />
+                  <Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
@@ -231,10 +229,9 @@ export default function About() {
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage:
-                "radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1.5px)",
-              backgroundSize: "30px 30px",
-            }}
+          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1.5px)",
+          backgroundSize: "30px 30px",
+        }}
           />
           <div className="relative z-10 max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-5">
             <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight">
@@ -255,7 +252,6 @@ export default function About() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
